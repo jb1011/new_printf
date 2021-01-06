@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parser_sub_functions.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jdemenet <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/06 10:46:43 by jdemenet          #+#    #+#             */
+/*   Updated: 2021/01/06 10:46:45 by jdemenet         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/ft_printf.h"
 
 int		ft_width_mem(char *str, int start, int end)
@@ -31,7 +43,8 @@ void	ft_get_width(char *str, int start, int end, t_arg *my_arg)
 	{
 		if ((ft_find_char("123456789", str[start], 0, 9)) >= 0)
 		{
-			while ((ft_find_char("0123456789", str[start + my_arg->m], 0, 10)) >= 0)
+			while ((ft_find_char("0123456789", str[start + my_arg->m]\
+						, 0, 10)) >= 0)
 			{
 				width[my_arg->m] = str[start + my_arg->m];
 				my_arg->m++;

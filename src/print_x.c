@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_x.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jdemenet <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/06 10:47:38 by jdemenet          #+#    #+#             */
+/*   Updated: 2021/01/06 10:47:40 by jdemenet         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/ft_printf.h"
 
 void	ft_print_x(t_arg *my_arg)
 {
-	unsigned int    my_x;
-	char            *base;
+	unsigned int	my_x;
+	char			*base;
 
 	my_x = (unsigned)my_arg->x;
 	if (my_arg->type == 'x')

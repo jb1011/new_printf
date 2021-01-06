@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_c.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jdemenet <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/06 10:46:59 by jdemenet          #+#    #+#             */
+/*   Updated: 2021/01/06 10:47:01 by jdemenet         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/ft_printf.h"
 
 void		ft_print_c(t_arg *my_arg)
@@ -14,7 +26,7 @@ int			ft_case1_c(t_arg *my_arg)
 	if (my_arg->width > 1 && my_arg->flag == '-')
 	{
 		ft_putchar(my_arg->c, my_arg);
-		ft_putchar_end((my_arg->width -1), ' ', my_arg);
+		ft_putchar_end((my_arg->width - 1), ' ', my_arg);
 		return (0);
 	}
 	if ((my_arg->width > 1 && my_arg->flag == '0'))

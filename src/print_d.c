@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_d.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jdemenet <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/06 10:47:07 by jdemenet          #+#    #+#             */
+/*   Updated: 2021/01/06 10:47:09 by jdemenet         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/ft_printf.h"
 
 void	ft_print_d(t_arg *my_arg)
 {
-	long int    nb_d;
+	long int	nb_d;
 	int			i;
 	int			j;
 
@@ -34,7 +46,8 @@ int		ft_case1_d(long int nb_d, int i, int j, t_arg *my_arg)
 		ft_putchar_end(i, ' ', my_arg);
 		return (0);
 	}
-	else if ((my_arg->width > nb_d && my_arg->flag == '0') && (my_arg->accuracy < 0))
+	else if ((my_arg->width > nb_d && my_arg->flag == '0')\
+				&& (my_arg->accuracy < 0))
 	{
 		if (my_arg->d < 0)
 		{
@@ -69,7 +82,7 @@ int		ft_case5_d(long int nb_d, int j, t_arg *my_arg)
 	return (0);
 }
 
-int		ft_case2_d(int i,  int j, t_arg *my_arg)
+int		ft_case2_d(int i, int j, t_arg *my_arg)
 {
 	if (my_arg->d < 0)
 	{
