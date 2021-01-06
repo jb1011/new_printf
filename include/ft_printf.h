@@ -32,12 +32,10 @@ typedef struct		s_arg
 	int				int_c;
 	char			c;
 	void			*p;
-	char			prefix[9];
 	int				x;
 	int				int_x;
 	int				ret;
 	char			less;
-	char			empty;
 	int				i;
 	int				m;
 	unsigned long	adr;
