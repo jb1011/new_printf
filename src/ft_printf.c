@@ -94,5 +94,6 @@ int		ft_printf(char *str, ...)
 		if (str[i] == '%' && str[i + 1] != '%')
 			i = ft_parse(str, i, &my_arg);
 	}
+	va_end(ap);
 	return (my_arg.ret);
 }

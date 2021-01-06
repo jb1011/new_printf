@@ -69,10 +69,8 @@ int		ft_case1_x(int nbr, int j, t_arg *my_arg, char *charx)
 {
 	if (my_arg->width > nbr && my_arg->flag == '-')
 	{
-		if (my_arg->accuracy == 0 && my_arg->flag == '-')
-		{
+		if (my_arg->accuracy == 0 && my_arg->x == 0)
 			ft_putchar(' ', my_arg);
-		}
 		else
 			ft_putstr(charx, my_arg);
 		ft_putchar_end(my_arg->i, ' ', my_arg);
@@ -82,11 +80,11 @@ int		ft_case1_x(int nbr, int j, t_arg *my_arg, char *charx)
 		ft_putchar_end(my_arg->i, '0', my_arg);
 	else if (my_arg->width > nbr && my_arg->flag != '-')
 		ft_putchar_end(my_arg->i, ' ', my_arg);
-	else if (my_arg->accuracy > nbr)
+	if (my_arg->accuracy > nbr)
 		ft_putchar_end(j, '0', my_arg);
-	else if (my_arg->accuracy == 0 && my_arg->x == 0 && my_arg->width > 0)
+	if (my_arg->accuracy == 0 && my_arg->x == 0 && my_arg->width > 0)
 		ft_putchar(' ', my_arg);
-	else if (my_arg->accuracy == 0 && my_arg->x == 0)
+	if (my_arg->accuracy == 0 && my_arg->x == 0)
 		return (0);
 	ft_putstr(charx, my_arg);
 	return (0);
@@ -101,7 +99,7 @@ int		ft_case2_x(int i, int j, t_arg *my_arg, char *charx)
 		ft_putchar_end(i - j, ' ', my_arg);
 		return (0);
 	}
-	else if (my_arg->width > my_arg->accuracy && my_arg->flag != '-')
+	if (my_arg->width > my_arg->accuracy && my_arg->flag != '-')
 	{
 		ft_putchar_end(i - j, ' ', my_arg);
 		ft_putchar_end(j, '0', my_arg);

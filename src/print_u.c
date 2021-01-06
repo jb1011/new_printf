@@ -68,5 +68,4 @@ int		ft_unsigned_nbr(unsigned long int nb)
 		nb /= 10;
 	}
 	return (i);
-	
 }
